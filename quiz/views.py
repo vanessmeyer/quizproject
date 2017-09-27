@@ -5,7 +5,7 @@ from django.shortcuts import render
 quizzes = [
 	{
 		"quiz_number": 1,
-		"name": "Klassiska böcker",
+		"name": "Klassiska bocker",
 		"description": "Hur bra jan du dina Klassiska?"
 	},
 	{
