@@ -10,12 +10,12 @@ quizzes = [
 	},
 	{
 		"quiz_number": 2,
-		"name": "Största fotbollslagen"
+		"name": "Största fotbollslagen",
 		"description": "Kan du dina lag?"
 	},
 	{
 		"quiz_number": 3,
-		"name": "Världens mest kända hackare"
+		"name": "Världens mest kända hackare",
 		"description": "Kan du din hackerhistoria?"
 	},	
 ]
