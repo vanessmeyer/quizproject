@@ -20,7 +20,10 @@
     <div class="container">
     	{% for quiz in quizzes %}
 	<div class="row">
-		<div class="col-md-4"><img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto"><br><a href="" target="_blank">{{ quiz.name }}</a>
+		<div class="col-md-4"><img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto">
+			<p><a href="{% url 'quiz_page' quiz.quiz_number %}">
+				{{ quiz.name }}
+			</a></p>
 		</div>
 		{% endfor %}
 
