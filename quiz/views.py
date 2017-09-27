@@ -1,6 +1,26 @@
 from django.shortcuts import render
 
-# Create your views here.
+# here is some testdata. This is a list with dictionaries within. 
+
+quizzes = [
+	{
+		"quiz_number": 1,
+		"name": "Klassiska böcker",
+		"description": "Hur bra jan du dina Klassiska?"
+	},
+	{
+		"quiz_number": 2,
+		"name": "Storsta footballslagen"
+		"description": "kan du dina lag?"
+	},
+	{
+		"quiz_number": 3,
+		"name": "Varldens mest kanda hackare"
+		"description": "kan du din hackerhistoria?"
+	}	
+]
+
+# Create your views here. These are view functions.
 def startpage(request):
 	return render(request, "startpage.html")
 
