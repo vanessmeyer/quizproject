@@ -23,5 +23,9 @@
 		<div class="col-md-4"><img src="https://cdn-arkquizzstoragelive.akamaized.net/cdn/4925a595-da18-4d06-96cf-5d9abe1bbca6_kim-kardashian-crazy-1[1].jpg"><br><a href="#">THE ULTIMATE KARDASHIAN QUIZ</div>
 	</div>
 	</div>
+{% for quiz in quizzes %}
+	<p>{{ quiz.name}}</p>
+{% endfor %}
+
 </body>
 </html>

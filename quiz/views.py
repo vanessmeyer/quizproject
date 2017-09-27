@@ -17,12 +17,15 @@ quizzes = [
 		"quiz_number": 3,
 		"name": "Varldens mest kanda hackare"
 		"description": "kan du din hackerhistoria?"
-	}	
+	},	
 ]
 
 # Create your views here. These are view functions.
 def startpage(request):
-	return render(request, "startpage.html")
+		context = {
+			"quizzes": quizzes,
+		}
+		return render(request, "startpage.html", context)
 
 def quiz(request, quiz_number):
 	return render(request, "quiz.html")
