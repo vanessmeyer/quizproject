@@ -1,0 +1,20 @@
+.intro {
+  text-align: center;
+  font-weight: 100px;
+  padding-bottom: 15px;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+h1 {
+text-decoration: underline;
+}
+.col-md-4 {
+	text-align: center;
+	font-family: helvetica;
+}
+img {
+	border-radius: 50%;
+	width: 300px;
+	height:143px;
+}
