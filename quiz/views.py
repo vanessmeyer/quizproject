@@ -5,18 +5,18 @@ from django.shortcuts import render
 quizzes = [
 	{
 		"quiz_number": 1,
-		"name": "Klassiska bocker",
-		"description": "Hur bra jan du dina Klassiska?"
+		"name": "Klassiska böcker",
+		"description": "Hur bra kan du dina Klassisker?"
 	},
 	{
 		"quiz_number": 2,
-		"name": "Storsta footballslagen"
-		"description": "kan du dina lag?"
+		"name": "Största fotbollslagen"
+		"description": "Kan du dina lag?"
 	},
 	{
 		"quiz_number": 3,
-		"name": "Varldens mest kanda hackare"
-		"description": "kan du din hackerhistoria?"
+		"name": "Världens mest kända hackare"
+		"description": "Kan du din hackerhistoria?"
 	},	
 ]
 

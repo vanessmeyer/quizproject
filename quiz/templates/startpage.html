@@ -11,9 +11,6 @@
 	<link href="/static/start-style.css" rel="stylesheet">
 </head>
 <body>
-	{% for quiz in quizzes %}
-		<p>{{ quiz.name }}</p>
-	{% endfor %}
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -21,9 +18,14 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="intro"><h1>Celebrity Quiz</h1>It's now time for a super celebrity quiz! Start by selecting your quiz.</div><br>
     <div class="container">
+    	{% for quiz in quizzes %}
 	<div class="row">
-		<div class="col-md-4"><img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto"><br><a href="file:///Users/vanessameyer/Documents/Tjejer%20kodar/Django/quizproject/quiz/templates/Quiz.html" target="_blank">WHICH KARDASHIAN ARE YOU?</a></div>
+		<div class="col-md-4"><img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto"><br><a href="" target="_blank">{{ quiz.name }}</a>
+		</div>
+		{% endfor %}
+
 		<div class="col-md-4"><img src="http://i.perezhilton.com/wp-content/uploads/2017/05/kardashian-gif-3.gif"><br><a href="#">THE KIM KARDASHIAN QUIZ</a></div>
+
 		<div class="col-md-4"><img src="https://cdn-arkquizzstoragelive.akamaized.net/cdn/4925a595-da18-4d06-96cf-5d9abe1bbca6_kim-kardashian-crazy-1[1].jpg"><br><a href="#">THE ULTIMATE KARDASHIAN QUIZ</div>
 	</div>
 	</div>
