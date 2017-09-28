@@ -1,11 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Quiz 1:What does an API do?</title>
+	<!-- Boostrap -->
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/quiz-style.css" rel="stylesheet">
+</head>
+<body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
 <h1>{{ question_number }}. {{ question }}</h1>
 <!-- We need to make sure a user's answer is sent to the answer view -->
 <form action = "{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 	<!-- (Detta har med säkerhet att göra (googla "csrf" för mer info). I detta fall är det ju inga hemliga data som vi sysslar med, men det är lättare att bara göra än att stänga av, och det skadar ju inte -->
 	{% csrf_token %}
 
-	<input type="radio" name="answer" value="1" checked=""> {{ answer1 }}
-	<input type="radio" name="answer" value="2"> {{ answer2 }}
-	<input type="radio" name="answer" value="3"> {{ answer3 }}
-	<button type ="submit"> Next</button>
+	<p><input type="radio" name="answer" value="1" checked=""> {{ answer1 }}</p>
+	<p><input type="radio" name="answer" value="2"> {{ answer2 }}</p>
+	<p><input type="radio" name="answer" value="3"> {{ answer3 }}</p>
+	<button type ="submit">Next</button>
 </form>

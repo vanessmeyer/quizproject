@@ -11,9 +11,9 @@ class Quiz(models.Model):
 
 class Question(models.Model):
 		question = models.TextField()
-		answer1 = models.CharField(max_length=100)
-		answer2 = models.CharField(max_length=100)
-		answer3 = models.CharField(max_length=100)
+		answer1 = models.CharField(max_length=200)
+		answer2 = models.CharField(max_length=200)
+		answer3 = models.CharField(max_length=200)
 		correct = models.PositiveIntegerField()
 		# This last line makes its so that if a quiz is deleted so are the questions for that quiz. 
 		quiz = models.ForeignKey(Quiz, related_name="questions", on_delete=models.CASCADE)

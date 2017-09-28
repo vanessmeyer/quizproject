@@ -3,18 +3,24 @@
 	text-align: center;
 }
 img {
-	border-radius: 70%;
-	max-width: 70%;
+	border-radius: 10%;
+	max-width: 30%;
+	max-height: 50%;
 	padding-bottom: 20px;
 }
 h1 {
 	text-align: center;
 	padding-bottom: 10px;
-	color: darkblue;
+	color: black;
 }
 
 h2 {
 	text-align: center;
+	color: grey;
+}
+h3 {
+	text-align: center;
+	color: black;
 }
 form {
 	font-size: 25px;
@@ -25,4 +31,7 @@ form {
 label {
 	font-weight: normal;
 
+}
+.btn.btn-default{
+	margin-bottom: 20px;
 }
