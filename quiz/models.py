@@ -18,6 +18,9 @@ class Question(models.Model):
 		# This last line makes its so that if a quiz is deleted so are the questions for that quiz. 
 		quiz = models.ForeignKey(Quiz, related_name="quesitons", on_delete=models.CASCADE)
 
+		def __str__(self):
+			return self.quiz.name + " / " + self.question
+
 
 
 
