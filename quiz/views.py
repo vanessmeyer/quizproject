@@ -1,29 +1,12 @@
 from django.shortcuts import render
+#This command pulls in Quiz models so we can connect views to database data
+from quiz.models import Quiz
 
-# here is some testdata. This is a list with dictionaries within. 
-
-quizzes = [
-	{
-		"quiz_number": 1,
-		"name": "Klassiska böcker",
-		"description": "Hur bra kan du dina Klassisker?"
-	},
-	{
-		"quiz_number": 2,
-		"name": "Största fotbollslagen",
-		"description": "Kan du dina lag?"
-	},
-	{
-		"quiz_number": 3,
-		"name": "Världens mest kända hackare",
-		"description": "Kan du din hackerhistoria?"
-	},	
-]
 
 # Create your views here. These are view functions.
 def startpage(request):
 		context = {
-			"quizzes": quizzes,
+			"quizzes": Quiz.objects.all(),
 		}
 		return render(request, "startpage.html", context)
 

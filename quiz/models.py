@@ -16,7 +16,7 @@ class Question(models.Model):
 		answer3 = models.CharField(max_length=100)
 		correct = models.PositiveIntegerField()
 		# This last line makes its so that if a quiz is deleted so are the questions for that quiz. 
-		quiz = models.ForeignKey(Quiz, related_name="quesitons", on_delete=models.CASCADE)
+		quiz = models.ForeignKey(Quiz, related_name="questions", on_delete=models.CASCADE)
 
 		def __str__(self):
 			return self.quiz.name + " / " + self.question
