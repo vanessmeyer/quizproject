@@ -17,39 +17,10 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="container">
     	<h1>Start the quiz!</h1>
-        <h1>{{ quiz.name }}</h1>
+        <h2>{{ quiz.name }}</h2>
         <p>{{ quiz.description }}</p>
     	<div class="row">
-            <h3>1. How do you feel about other people's success?</h3>
             <img src="https://media.thetab.com/blogs.dir/279/files/2017/01/members-of-the-kardashian-family-u1.jpg">
-    		<form>
-                <div>
-    			<input type="radio" name="feelings" value="great" id="radio1">
-                <label for="radio1">Great!</label></div>
-
-    			<div>
-                <input type="radio" name="feelings" value="no one"> No one else kan be successful, that is MY thing.</div>
-                
-                <div>
-                <input type="radio" name="feelings" value="whatever"> That's fine, whatever.</div>
-                
-                <div>
-                <input type="radio" name="feelings" value="sad"> It makes me a little sad bekause I worry I'll never be successful</div>
-                
-                <div>
-                <input type="radio" name="feelings" value="who cares"> Who cares, they'll never be as successful as me.</div>
-                <div>
-                <input type="radio" name="feelings" value="good"> Good for them! What can I get out of it?</div>
-            </form> 
-        <div class="row">
-            <h3>2. How do you react to failure?</h3>
-            <img src="http://ugc-01.cafemomstatic.com/gen/crop/635/450/70/2015/08/12/13/6m/bw/phzxb5qfk8.jpg">
-            <form>
-                <input type="radio" name="failure" value="what"> What is failure again?<br>
-                <input type="radio" name="failure" value="sometimes"> It happens sometimes, you just have to stay motivated.<br>
-                <input type="radio" name="failure" value="option"> Failure isn't an option<br>
-
-            </form>
 
              <p><a href="{% url 'question_page' quiz_number 1 %}">
                 Start

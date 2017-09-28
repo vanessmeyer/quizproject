@@ -12,6 +12,10 @@ h1 {
 	padding-bottom: 10px;
 	color: darkblue;
 }
+
+h2 {
+	text-align: center;
+}
 form {
 	font-size: 25px;
 	text-align: left;
