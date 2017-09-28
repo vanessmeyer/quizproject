@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Quiz Template</title>
+	<title>Quiz start</title>
 	<!-- Boostrap -->
 	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/static/start-style.css" rel="stylesheet">
@@ -16,20 +16,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <div class="intro"><h1>Celebrity Quiz</h1>It's now time for a super celebrity quiz! Start by selecting your quiz.</div><br>
+    <div class="intro"><h1>Welcome!</h1>It's now time for a super techy quiz! Start by selecting your quiz.</div><br>
     <div class="container">
     	{% for quiz in quizzes %}
 	<div class="row">
-		<div class="col-md-4"><img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto">
+		<div class="col-md-4">
+			<img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto">
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}">
 				{{ quiz.name }}
 			</a></p>
 		</div>
 		{% endfor %}
 
-		<div class="col-md-4"><img src="http://i.perezhilton.com/wp-content/uploads/2017/05/kardashian-gif-3.gif"><br><a href="#">THE KIM KARDASHIAN QUIZ</a></div>
-
-		<div class="col-md-4"><img src="https://cdn-arkquizzstoragelive.akamaized.net/cdn/4925a595-da18-4d06-96cf-5d9abe1bbca6_kim-kardashian-crazy-1[1].jpg"><br><a href="#">THE ULTIMATE KARDASHIAN QUIZ</div>
 	</div>
 	</div>
 </body>

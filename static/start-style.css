@@ -1,14 +1,16 @@
+body{
+  background-color: #FF6346;
+}
+
 .intro {
   text-align: center;
   font-weight: 100px;
-  padding-bottom: 15px;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
+  padding-top:50px;
+  padding-bottom: 45px;
+  background-color: #FF6346;
+  color:white;
 }
-h1 {
-text-decoration: underline;
-}
+
 .col-md-4 {
 	text-align: center;
 	font-family: helvetica;
@@ -17,4 +19,16 @@ img {
 	border-radius: 50%;
 	width: 300px;
 	height:143px;
+  padding-bottom: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+.row {
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 20px;
 }
