@@ -45,20 +45,20 @@ def completed(request, quiz_number):
 	questions = list(quiz.questions.all())
 	saved_answers = request.session.get(str(quiz_number), {})
 # Then we need to loop through the questions one by one and compared them with the right answers. When a correct answer is found we increase num_correct_answers with 1. 
-	num_correct_answers=0
+	num_correct_answers = 0
 	for question_number, answer in saved_answers.items():
-		correct_answer = questions[int(question_number)-1].correct
+		correct_answer = questions[int(question_number) -1].correct
 
 		if correct_answer == answer:
 			num_correct_answers = num_correct_answers + 1
 
-#  ändra context-variabeln i completed så att den skickar tillbaka vilka svar som var korrekta såhär:
+# change context-variabeln i completed så att den skickar tillbaka vilka svar som var korrekta såhär:
 	num_questions = quiz.questions.count()
 	context = {
 		"correct": num_correct_answers,
 		"total": num_questions,
 	}
-
+	return render(request, "completed.html", context)
 # Here we define a new view (i.e. logic) for when a user answers to the quiz. This logic defines what we will do with those answers.
 # The request.POST gets out the choice the user made to the question. 
 # Then we get out the dictionary with all the user's answers so far and save the users latest answer to that list (i.e. saved_answers).
