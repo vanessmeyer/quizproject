@@ -18,13 +18,22 @@ def quiz(request, quiz_number):
 	}
 	return render(request, "quiz.html", context)
 
+#The question view definition needs to first identify which quiz these questiosn belong to so it can use the quiz_number that with the urls.py to question view. We use quiz.objects.get to get out the quiz from the database. 
+#Then we save the quiz as a variable that we call quiz.
+#Then we need to get out all the question from the list to a list by witting quiz.question.all().This will get out all the question that belong to that specific quiz.
+# Then we use question_number, the number that comes with the question view, to get out the right "position" from the list of questions (i.e. each question has its own url).  
+
 def question(request, quiz_number, question_number):
+	quiz = Quiz.objects.get(quiz_number=quiz_number)
+	questions = quiz.questions.all()
+	question = questions[question_number - 1]
 	context = {
 		"question_number": question_number,
-		"question": "Hur många bultar har ölandsbron?",
-		"answer1": "12",
-		"answer2": "66 400",
-		"answer3": "7 428 954",
+		"question": question.question,
+		"answer1": question.answer1,
+		"answer2": question.answer2,
+		"answer3": question.answer3,
+		"quiz": quiz,
 		"quiz_number": quiz_number,
 	}
 	return render(request, "question.html", context)
