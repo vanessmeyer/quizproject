@@ -35,3 +35,9 @@ label {
 .btn.btn-default{
 	margin-bottom: 20px;
 }
+
+.input {
+	font-size:20px;
+	line-height: 50px;
+	margin-bottom: 30px;
+}
