@@ -5,3 +5,14 @@
 <p><a href="{% url 'completed_page' quiz_number %}">
 	Next
 </a></p>
+
+<!-- We need to make sure a user's answer is sent to the answer view -->
+<form action = "{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+	<!-- (Detta har med säkerhet att göra (googla "csrf" för mer info). I detta fall är det ju inga hemliga data som vi sysslar med, men det är lättare att bara göra än att stänga av, och det skadar ju inte -->
+	{% csrf_token %}
+
+	<input type="radio" name="answer" value="1" checked=""> {{ answer1 }}
+	<input type="radio" name="answer" value="2"> {{ answer2 }}
+	<input type="radio" name="answer" value="3"> {{ answer3 }}
+	<button type ="submit"> Next</button>
+</form>
