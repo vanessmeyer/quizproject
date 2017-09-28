@@ -13,7 +13,7 @@ def startpage(request):
 # Why the quiz_number -1? Because quizzes is a list and therefore quiz #1 is the first one in the list (i.e. place 0)
 def quiz(request, quiz_number):
 	context = {
-		"quiz": quizzes[quiz_number - 1],
+		"quiz": Quiz.objects.get(quiz_number=quiz_number),
 		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz.html", context)
