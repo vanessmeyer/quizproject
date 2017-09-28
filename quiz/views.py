@@ -53,9 +53,9 @@ def completed(request, quiz_number):
 # We then save thier latest answer and connect to the question they answered (i.e. saved_answers connects to question_number) 
 # Then we save the whole list with the questions the user has answered. 
 # Finally, we redirect the user to the next question by taking the question we are on (i.e. question_page) and adding 1 (i.e +1) to the question_number
-def answer(request, quiz_number, question_number)
+def answer(request, quiz_number, question_number):
 	answer = request.POST["answer"]
 	saved_answer = request.session.get(str(quiz_number), {})
 	saved_answers[question_number] = int(answer)
 	request.session[quiz_number] = saved_answers
-	retun redirect("question_page", quiz_number, question_number + 1)
+	return redirect("question_page", quiz_number, question_number + 1)
