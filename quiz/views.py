@@ -1,6 +1,7 @@
 from django.shortcuts import render
-#This command pulls in Quiz models so we can connect views to database data
-from quiz.models import Quiz
+#This import pulls in Quiz models so we can connect views to database data
+from quiz.models import Quiz 
+from django.shortcuts import redirect
 
 
 # Create your views here. These are view functions.
@@ -45,3 +46,16 @@ def completed(request, quiz_number):
 		"quiz_number": quiz_number,
 	}
 	return render(request, "completed.html", context)
+
+# Here we define a new view (i.e. logic) for when a user answers to the quiz. This logic defines what we will do with those answers.
+# The request.POST gets out the choice the user made to the question. 
+# Then we get out the dictionary with all the user's answers so far and save the users latest answer to that list (i.e. saved_answers).
+# We then save thier latest answer and connect to the question they answered (i.e. saved_answers connects to question_number) 
+# Then we save the whole list with the questions the user has answered. 
+# Finally, we redirect the user to the next question by taking the question we are on (i.e. question_page) and adding 1 (i.e +1) to the question_number
+def answer(request, quiz_number, question_number)
+	answer = request.POST["answer"]
+	saved_answer = request.session.get(str(quiz_number), {})
+	saved_answers[question_number] = int(answer)
+	request.session[quiz_number] = saved_answers
+	retun redirect("question_page", quiz_number, question_number + 1)
