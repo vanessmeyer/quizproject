@@ -3,9 +3,6 @@
 	text-align: center;
 }
 img {
-	border-radius: 10%;
-	max-width: 30%;
-	max-height: 50%;
 	padding-bottom: 20px;
 }
 h1 {
@@ -32,7 +29,7 @@ label {
 	font-weight: normal;
 
 }
-.btn.btn-default{
+.btn.btn-default {
 	margin-bottom: 20px;
 }
 
@@ -41,3 +38,9 @@ label {
 	line-height: 50px;
 	margin-bottom: 30px;
 }
+
+.img.question {
+	padding-left: 150px;
+
+}
+

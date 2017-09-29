@@ -17,6 +17,7 @@
     <script src="/static/js/bootstrap.min.js"></script>
 
 <h1>{{ question_number }}. {{ question }}</h1>
+<img src="/static/images/questions/icon{{ question_number }}.png" class="img question">
 <!-- We need to make sure a user's answer is sent to the answer view -->
 <form action = "{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 	<!-- (Detta har med säkerhet att göra (googla "csrf" för mer info). I detta fall är det ju inga hemliga data som vi sysslar med, men det är lättare att bara göra än att stänga av, och det skadar ju inte -->
