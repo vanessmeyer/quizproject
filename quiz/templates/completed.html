@@ -22,18 +22,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+
 {% if correct > 4 %}
-	Very good! You are quite technical my friend.
+	<h4>Very good! You are quite technical my friend.</h4>
+	<img src="/static/images/completed/gif1.gif"><br>
 	You got {{ correct }} of {{ total }} questions right
 {% elif correct > 2 %}
-	Not bad. You could use a little more training.
+	<h4>Not bad! You could use a little more training though.</h4>
+	<img src="/static/images/completed/gif2.gif"><br>
 	You got {{ correct }} of {{ total }} questions right
 {% else %}
-	Fail!
+	<h4>Fail!</h4>
+	<img src="/static/images/completed/gif3.gif"><br>
 	You got {{ correct }} of {{ total }} questions right
 {% endif %}
 <p><a href="{% url 'start_page' %}">
 	To Start Page
 </a></p>
+  </body>
+</html>
