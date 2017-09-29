@@ -16,12 +16,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <div class="intro"><h1>Welcome!</h1>It's now time for a super techy quiz! Start by selecting your quiz.</div><br>
+    <div class="intro"><h1>Welcome!</h1>Here you will find several quizes about technology.They are about {{ quizzes }} </div><br>
     <div class="container">
     	{% for quiz in quizzes %}
 	<div class="row">
 		<div class="col-md-4">
-			<img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/webdr01/2013/8/21/15/enhanced-buzz-6156-1377112214-2.jpg?downsize=1400:*&output-format=auto&output-quality=auto">
+			<img src="/static/images/saas_icon.png">
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}">
 				{{ quiz.name }}
 			</a></p>

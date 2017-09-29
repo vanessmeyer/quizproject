@@ -25,7 +25,7 @@ SECRET_KEY = 'q0x%q56_g%b1q5@*4e$j+d%o-e8+x1%o#o4_wk1y_=1ag&!1g!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,11 +74,13 @@ WSGI_APPLICATION = 'quizsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
+import dj_database_url
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'Default': dj_database_url.config(
+        default='sqlite:////{0}'.format(
+            os.path.join(BASE_DIR, 'db.sqlite3')
+        )
+    )
 }
 
 
@@ -123,3 +125,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+# Detta gör att alla CSS-filer och bilder som ligger i static-mappen kommer att skickas med som de ska.
+STATIC_ROOT = 'staticfiles'
