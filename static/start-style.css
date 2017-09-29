@@ -2,6 +2,10 @@ body{
   background-color: #FF6346;
 }
 
+h1 {
+  font-size: 100px;
+}
+
 .intro {
   text-align: center;
   font-weight: 100px;
@@ -32,3 +36,5 @@ a {
   line-height: 50px;
   font-size: 20px;
 }
+
+
