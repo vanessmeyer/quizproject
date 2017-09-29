@@ -58,7 +58,7 @@ def completed(request, quiz_number):
 		"correct": num_correct_answers,
 		"total": num_questions,
 	}
-	return render(request, "completed.html", context)
+	return render(request, "completed.html", context) 
 # Here we define a new view (i.e. logic) for when a user answers to the quiz. This logic defines what we will do with those answers.
 # The request.POST gets out the choice the user made to the question. 
 # Then we get out the dictionary with all the user's answers so far and save the users latest answer to that list (i.e. saved_answers).
