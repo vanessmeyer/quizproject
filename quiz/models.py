@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here. Models are How the site speaks to database.
 class Quiz(models.Model):
 		quiz_number = models.PositiveIntegerField()
-		name = models.CharField(max_length=100)
+		name = models.CharField(max_length=200)
 		description = models.TextField()
 
 		def __str__(self):
