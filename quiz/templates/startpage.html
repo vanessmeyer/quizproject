@@ -22,7 +22,7 @@
     	{% for quiz in quizzes %}
 	<div class="row">
 		<div class="col-md-4">
-			<img src="/static/images/saas_icon.png">
+			<img src="/static/images/icon{{ quiz.quiz_number }}.png">
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}">
 				{{ quiz.name }}
 			</a></p>
