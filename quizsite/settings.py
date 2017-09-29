@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'quizsite.wsgi.application'
 
 import dj_database_url
 DATABASES = {
-    'Default': dj_database_url.config(
+    'default': dj_database_url.config(
         default='sqlite:////{0}'.format(
             os.path.join(BASE_DIR, 'db.sqlite3')
         )
