@@ -19,7 +19,7 @@
         <h1>{{ quiz.name }}</h1>
         <h3>{{ quiz.description }}</h3>
     	<div class="row">
-            <img src="https://s.tmimgcdn.com/blog/wp-content/uploads/2014/01/saas_icon.png?x47994">
+            <img src="/static/images/icon{{ quiz.quiz_number }}.png">
             <p><a href="{% url 'question_page' quiz_number 1 %}" class="btn btn-default">Start Quiz</a></p>
             <p><a href="{% url 'start_page' %}">Go back to start</a></p>
 
